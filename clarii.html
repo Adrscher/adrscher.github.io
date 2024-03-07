@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Animation</title>
+  <style>
+    #animation-container {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <pre id="animation-container"></pre>
+
+  <script>
+    const animationContainer = document.getElementById('animation-container');
+    const frames = [
+	`..........`,
+      `Oi, então... `,
+      `Posso te contar umas coisas? `,
+      `Sim? `,
+	  	  `.......... `,
+		  `Nossa vida... `, 
+		  `Hoje como adultos falamos:.. `,
+		  `"Quando eramos crianças não nos preocupavamos com nada... `,
+		  `e hoje como adultos, a ansiedade quase sempre nos mata."  `,
+		  `... `,
+		  `Eu, comecei a olhar envolta `,
+		  `Olhei para minha mãe, meu pai, minha vó `,
+		  `E percebi que havia algo. `,
+		  `Algo bem nitido. `,
+		  `O tempo tinha passado. `,
+		  `Meu vô se foi em 2022 e não parece que faz tanto tempo `,
+		  `Um algúem que era discreto, mas havia sua presença `,
+		  `E essa presença, já não existe mais `,
+		  `É doloroso saber que, tem coisas na vida que não voltam `,
+		  `Me doi, é um vazio sem explicação `,
+		  `As lagrimas apenas escorrem `,
+		  `Saber que algo que era sempre do seu dia `,
+		  `Simplesmente já não existe mais `,
+		  `... `,
+		  `Nos conhecemos em 2023/07 `,
+		  `É estranho pensar que é 3/4 meses já faz 1 ano `,
+		  `O tempo passou e o que era rotineiro `,
+		  `Simplesmente são as minhas últimas lembranças `,
+		  `Elas ainda são meia claras `,
+		  `Mas eu já me esqueci de tantas `,
+		  `Quanto mais o tempo passa `,
+		  `Quanto mais eu não acredito que já passou `,
+		  `São memorias amarelas, são memorias claras `,
+		  `São boas memorias, memorias que foram maravilhosas `,
+		  `De serem vividas `,
+		  `Saber que foram muito boas e não poder mais telas `,
+		  `É triste `,
+		  `Que tempos bons sabe `,
+		  `Sinceramente esse texto foram escrito com lagrimas `,
+		  `Foi mal, não era pra ser tão dramatico `,
+		  `Eu só queria ter feito uma coisinha boba e fofa `,
+		  `Mas acabei tendo uma crise de lembranãs quando comecei `,
+		  `E esse foi o resultado `,
+		  `... `,
+		  `Minha linguagem do amor? `,
+		  `Eu sou pessoa que já fez muito `,
+		  `E que recebeu poucos elogios `,
+		  `Então durante a vida eu nunca soube lidar `,
+		  `Quando eu recebo um elogio, não sei reagi `,
+		  `Não sei interpretar, não sei definir `,
+		  `Certamente minha pessoa tem caracteristicas estranhas `,
+		  `Estranhamente na minha vida eu vivi mais a tristeza `,
+		  `Do que o amor `,
+		  `Quando algo é muito bom, logo meu eu interno diz que tem algo errado `,
+		  `Mas uma qualidade que sempre me ajudo, é que eu consigo rir de tudo `,
+		  `Então no fim das contas fico sereno e tento seguir mais a lógica `,
+		  `Eu odeio problemas, por isso sempre o resolvi da maneira mais `,
+		  `Rápida ou preguiçosa possível, eu amo a minha paz. `,
+		  `Eu amo está em paz com todos `,
+		  `... `,
+		  `Clarii, eu não sei exatamente o que pensa sobre mim `,
+		  `Mas o que eu penso sobre você? `,
+		  `Ira falar do fundo `,
+		  `Eu amo você e amo oque você me faz sentir `,
+		  `Eu simplesmente genuinamente gosto de você `,
+		  `Claro que você tem defeitos e acertos `,
+		  `E claramente, eu também `,
+		  `Mas mesmo assim ainda adoro `,
+		  `Acho que a coisa que mais me deixaria triste `,
+		  `É saber que você não é você `,
+		  `Eu adoro cada memoria nossa `,
+		  `Eu adoro o seu jeito `,
+		  `Eu me adoro `,
+		  `Eu ti adoro `,
+		  `Eu nos adoro `,
+		  `Eu queria dizer que sou uma pessoa um pouco insegura, `,
+		  `tenho um pouco de problemas com isso `,
+		  `Cada pequena coisa eu me atento `,
+		  `Sla eu sempre fuia assim `,
+		  `Então peço seu apoio `,
+		  `As vezes não falo algo `,
+		  `As vezes não faço algo `,
+		  `Porque eu sou meio inseguro `,
+		  `Eu reconheço isso e tô procurando melhorar já `,
+		  `Espero que compreenda `,
+		  `... `,
+		  `Como eu disse, eu quero te conhecer `,
+		  `Mas seria um prazer se você me conhecesse também `,
+		  `... `,
+		  `Eu acho que sou um artista que tá pitando um quadro`,
+		  `De um jeito louco, harmonioso ou bonito `,
+		  `Vamos pintar um quadro juntos? `,
+		  `E entender a arte abstrata de cada um. `,
+		  `Falando mais, aleatoriamente `,
+          `Admiro varias coisas em ti sabia? `,
+          `As vezes até me comparo `,
+          `Mas saiba, que meu amor por ti é genuino `,
+          `... `,
+          `Ti amo, Clarii `,
+          `Não desejo nada necessariamente em troca, mas levanta meu ego depois, que eu gosto `,
+		  `... `,
+          `<3 Vulgo amor da sua vida, para você Clarii `,
+		  `Vamos nos romantizar. ` ,
+		  `(✿◡‿◡) nosso amor tem potencial `
+		  
+		  
+		  
+		  
+	  
+	  
+    ];
+
+    const frameDuration = 3000; // Tempo para cada frame em milissegundos
+    const timeBetweenFrames = 1100; // Tempo entre frames em milissegundos
+    const charactersPerFrame = 1; // Número de caracteres a serem exibidos a cada vez
+
+    let currentFrameIndex = 0;
+    let currentCharacterIndex = 0;
+
+    function displayFrame() {
+      const currentFrame = frames[currentFrameIndex];
+      const displayedCharacters = currentFrame.slice(0, currentCharacterIndex);
+
+      animationContainer.textContent = displayedCharacters;
+
+      // Avança para o próximo caractere ou reinicia se atingir o final
+      currentCharacterIndex += charactersPerFrame;
+
+      // Se ainda não exibiu todo o frame, agende a exibição do próximo caractere
+      if (currentCharacterIndex < currentFrame.length) {
+        setTimeout(displayFrame, frameDuration / currentFrame.length);
+      } else {
+        // Se exibiu todo o frame, agende a exibição do próximo frame após o tempo entre frames
+        currentCharacterIndex = 0;
+        currentFrameIndex = (currentFrameIndex + 1) % frames.length;
+        setTimeout(displayFrame, timeBetweenFrames);
+      }
+    }
+
+    // Inicie a animação
+    displayFrame();
+  </script>
+</body>
+</html>
